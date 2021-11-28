@@ -1,0 +1,58 @@
+.loRe{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-image: linear-gradient(to right,#dc2424,#4a569d);
+
+     .cover-lore{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        background-color: rgb(8, 8, 31);
+        color: white;
+        padding: 80px 20px;
+        width: 380px;
+        // background-color: red;
+    }
+    
+    .loRe-check{
+        color: rgba(255, 255, 255, 0.315);
+        padding: 2px 4px;
+    }
+
+    .active{
+        color: #fff;
+        border: solid rgb(112, 230, 96) 1px;
+        border-radius: 4px;
+    }
+    input{
+        border: none;
+        outline: none;
+        background-color: #32364a;
+        border-style: none;
+        color: #fff;
+
+    }
+
+    .input{
+        background-color: #32364a;
+        margin: 0px -20px;
+        display: flex;
+        padding: 4px;
+        justify-content: space-around;
+    }
+    i{
+        line-height: 2;
+    }
+    .post-data{
+        border: solid pink 2px;
+        border-radius: 4px;
+        padding: 4px 8px;
+    }
+    .note{
+        color: rgba(255, 255, 255, 0.301);
+    }
+}
