@@ -1,10 +1,16 @@
+import { Outlet } from 'react-router';
 import './App.css';
-import LoginRegister from './feature/LoginRegister';
+import Navbar from './component/Navbar';
 
 function App() {
   return (
     <div className="">
-      <LoginRegister/>
+      <div className='container-fluid'>
+        <Outlet/>
+      </div>
+      <div className='footer fixed-bottom'>
+        <Navbar/>
+      </div>
     </div>
   );
 }

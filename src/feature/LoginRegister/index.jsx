@@ -57,6 +57,7 @@ const LoginRegister = ()=>{
                 }
                 $('.notication').innerHTML = data.data.message
                 setCookie('token',data.data.token)
+                window.location.reload()
             })
         }
         

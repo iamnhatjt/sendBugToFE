@@ -13,6 +13,14 @@
     transform: translateY(3px);
 }
 
+.link{
+    color: #fff;
+}
+
+.link:hover{
+    color: #fff;
+}
+
 html{
     -webkit-user-select: none;
     user-select: none;
