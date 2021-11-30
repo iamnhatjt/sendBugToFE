@@ -1,0 +1,27 @@
+.home{
+    background-color: #0a2647;
+    height: 100vh;
+    .time-hours{
+        background-color: black;
+        font-size: 70px;
+        line-height: 80px;
+    }
+    .time-days{
+        background-color: rgba(0, 233, 233, 0.6);
+        font-size: 1.5rem;
+        line-height: 25px;
+    }
+    .time{
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    .home-second{
+        background-color: black;
+        border-radius: 4px;
+        overflow: hidden;
+        .welcome{
+            color: #fff;
+        }
+    }
+}

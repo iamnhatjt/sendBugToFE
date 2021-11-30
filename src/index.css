@@ -1,13 +1,14 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+body::-webkit-scrollbar {
+    width: 14px;               /* Chiều rộng vùng chứa scrollbar */
+  }
+  body::-webkit-scrollbar-track {
+    background: #ccc;        /* Màu nền ngoài của thanh scrollbar */
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: #67f6f6;    /* Màu của thanh cuộn (scroll thumb) */
+    border-radius: 5px;       /* Bo góc scroll thumb */
+    border: 2px solid #ccc;  /* Không hỗ trợ padding, margin, transition nên dùng viền cùng màu nên để padding scroll thumb */
+  }
+  body::-webkit-scrollbar-thumb:hover {
+      background-color: #72eaee; /* Hiệu ứng di chuột đổi màu*/
+  }

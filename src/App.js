@@ -5,7 +5,7 @@ import Navbar from './component/Navbar';
 function App() {
   return (
     <div className="">
-      <div className='container-fluid'>
+      <div className='app-bg'>
         <Outlet/>
       </div>
       <div className='footer fixed-bottom'>

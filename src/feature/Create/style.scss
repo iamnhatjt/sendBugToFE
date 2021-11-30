@@ -1,0 +1,28 @@
+.create{
+    color: #fff;
+    input{
+        margin: 20px 0px;
+        outline: none;
+        border-style: none;
+        width: 40vw;
+        background-color: #0a2647;
+        border-bottom: rgb(59, 219, 211) solid;
+        color: #fff;
+    }
+    .input-element{
+        .input{
+            width: 40vw;
+        }
+        
+    }
+    .no-name{
+        height: 80px;
+    }
+
+    .send-data{
+        border: solid rgb(13, 132, 136) 2px;
+        border-radius: 4px;
+        padding: 4px 12px;
+        background-color: #031e3e;
+    }
+}

@@ -14,14 +14,15 @@ const lesson = createSlice({
     name: 'lesson',
     initialState: {lesson: []},
     reducers:{
-
+        
     },
     extraReducers: {
         [getData.fulfilled]: (state, action)=>{
             state.lesson = action.payload.data.data
-            console.log('dada')
         }
     }
 })
 
-export default lesson
+export const {setUserName} = lesson.actions
+
+export default lesson.reducer
