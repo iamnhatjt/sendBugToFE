@@ -1,11 +1,12 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+import url_base from "../../variable";
 
 export const getData = createAsyncThunk('lesson', async ()=>{
     const data =  await  axios({
+        withCredentials: true,
         method:'get',
-        url:'https://nhatjt-mobile.herokuapp.com/get',
-        withCredentials: true
+        url:`${url_base}/get`,
     })
     return data
 })

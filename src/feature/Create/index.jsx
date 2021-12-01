@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Input from './element/Input'
 import './style.scss'
 import axios from 'axios'
+import url_base from '../../variable'
 
 function Create() {
     const $ = document.querySelector.bind(document)
@@ -23,7 +24,7 @@ function Create() {
         }
         axios({
             method:'post',
-            url:'https://nhatjt-mobile.herokuapp.com/createlesson',
+            url:`${url_base}/createlesson`,
             withCredentials:true,
             data:{
                 label: $('.label').value,

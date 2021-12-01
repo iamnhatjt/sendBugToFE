@@ -1,6 +1,7 @@
 import { useState } from "react"
 import './style.scss'
 import axios from 'axios'
+import url_base from "../../variable"
 
 const LoginRegister = ()=>{
     const $ = document.querySelector.bind(document)
@@ -28,11 +29,13 @@ const LoginRegister = ()=>{
             else{
                 axios({
                     method: 'post',
-                    url: 'https://nhatjt-mobile.herokuapp.com/register',
+                    url: `${url_base}/register`,
                     data: {
                         username: $('#userName').value,
                         password: $('#passWord').value
                     }
+                    ,withCredentials:true
+
                 })
                 .then(data=>{
                     if(data.data.status ==='success'){
@@ -46,7 +49,7 @@ const LoginRegister = ()=>{
         else{
             axios({
                 method: 'post',
-                url: 'https://nhatjt-mobile.herokuapp.com/login',
+                url: `${url_base}/login`,
                 data: {
                     username: $('#userName').value,
                     password: $('#passWord').value

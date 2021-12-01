@@ -4,6 +4,7 @@ import 'animate.css'
 
 import {useSelector} from 'react-redux'
 import axios from 'axios'
+import url_base from '../../variable'
 
 function Detail() {
     const [index, setIndex] = useState(0)
@@ -51,7 +52,7 @@ function Detail() {
                                 return
                             }
                             setIndex(pre=>pre-1)
-                            }, 500);
+                            }, 300);
 
                         }}
                     ></i>
@@ -71,7 +72,7 @@ function Detail() {
                                     return
                                 }
                                 setIndex(pre=>pre+1)
-                                }, 0);
+                                }, 300);
                                 
                                 
                             }
@@ -103,7 +104,7 @@ function Detail() {
                             axios({
                                 method: 'delete',
                                 withCredentials: true,
-                                url: 'https://nhatjt-mobile.herokuapp.com/deletelesson',
+                                url: `${url_base}/deletelesson`,
                                 data:{
                                     label: label
                                 }
