@@ -34,7 +34,7 @@ const LoginRegister = ()=>{
                         username: $('#userName').value,
                         password: $('#passWord').value
                     }
-                    ,withCredentials:true
+                    ,withCredentials:true,
 
                 })
                 .then(data=>{

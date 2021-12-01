@@ -4,7 +4,7 @@ import 'animate.css'
 
 import {useSelector} from 'react-redux'
 import axios from 'axios'
-import url_base from '../../variable'
+import url_base, { token } from '../../variable'
 
 function Detail() {
     const [index, setIndex] = useState(0)
@@ -106,7 +106,8 @@ function Detail() {
                                 withCredentials: true,
                                 url: `${url_base}/deletelesson`,
                                 data:{
-                                    label: label
+                                    label: label,
+                                    token: token
                                 }
 
                             })

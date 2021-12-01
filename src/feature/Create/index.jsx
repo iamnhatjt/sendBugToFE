@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Input from './element/Input'
 import './style.scss'
 import axios from 'axios'
-import url_base from '../../variable'
+import url_base, { token } from '../../variable'
 
 function Create() {
     const $ = document.querySelector.bind(document)
@@ -28,7 +28,9 @@ function Create() {
             withCredentials:true,
             data:{
                 label: $('.label').value,
-                data: dataPost
+                data: dataPost,
+                token: token
+
             }
         })
         .then(data=>{
