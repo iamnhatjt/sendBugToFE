@@ -1,0 +1,35 @@
+.detail{
+    .board{
+        height: 50vh;
+        // width: 60vw;
+        background-color: #1a1d28;
+        border-radius: 12px;
+        cursor: pointer;
+        position: relative;
+        color: #fff;
+    }
+    .board-child{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        white-space: nowrap;
+    }
+    .key{
+        min-width: 40vw;
+        padding: 8px 0px;
+        font-size: 32px;
+        background-color: #282e3e;
+        margin: 30px 0px;
+        border-radius: 8px;
+    }
+    .key-1{
+        display: block;
+        margin: auto 0px;
+        font-size: 24px;
+    }
+}
+
+.noname{
+    height: 90px;
+}

@@ -11,17 +11,22 @@ const Navbar = ()=>{
                 <Link to='' className='link n-hover' ><i className="fas fa-home"></i></Link>
             </div>
             <div className="n-nav-item nav-border">
-                <Link to='' className='link n-hover' >
+                <Link to='/create' className='link n-hover' >
                 <i className="fas fa-book"></i>
                 </Link>
             </div>
             <div className="n-nav-item nav-border">
-                <Link to='' className='link n-hover' >
+                <Link to='/overview' className='link n-hover' >
                 <i className="fab fa-studiovinari"></i>
                 </Link>
             </div>
             <div className="n-nav-item nav-border">
-                <Link to='' className='link n-hover' ><i className="fas fa-home"></i></Link>
+                <Link to='/' className='link n-hover' 
+                    onClick={()=>{
+                        document.cookie = 'token' +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+                        window.location = '/'
+                    }}
+                ><i class="fas fa-sign-out-alt"></i></Link>
             </div>
         </nav>
     )

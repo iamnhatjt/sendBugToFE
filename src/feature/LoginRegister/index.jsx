@@ -56,10 +56,11 @@ const LoginRegister = ()=>{
                 if(data.data.status ==='success'){
                     $('.notication').classList.remove('text-danger')
                     $('.notication').classList.add('text-success')
+                    window.location ='/'
+
                 }
                 $('.notication').innerHTML = data.data.message
                 setCookie('token',data.data.token)
-                window.location.reload()
             })
         }
         

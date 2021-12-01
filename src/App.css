@@ -22,7 +22,7 @@
     color: #fff;
 }
 .app-bg{
-    background-color: #0a2647;
+    background-image: linear-gradient(to right,#0d324d,#7f5a83);
     min-height: 100vh;
   }
 
@@ -35,4 +35,9 @@ html{
     border: solid rgb(163, 245, 130) 2px;
     border-radius: 4px;
     padding: 4px 8px;
+}
+
+#root{
+    overflow: hidden;
+
 }
