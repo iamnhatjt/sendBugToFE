@@ -28,7 +28,7 @@ const LoginRegister = ()=>{
             else{
                 axios({
                     method: 'post',
-                    url: 'http://localhost:5000/register',
+                    url: 'https://nhatjt-mobile.herokuapp.com/register',
                     data: {
                         username: $('#userName').value,
                         password: $('#passWord').value
@@ -46,11 +46,12 @@ const LoginRegister = ()=>{
         else{
             axios({
                 method: 'post',
-                url: 'http://localhost:5000/login',
+                url: 'https://nhatjt-mobile.herokuapp.com/login',
                 data: {
                     username: $('#userName').value,
                     password: $('#passWord').value
                 }
+                ,withCredentials:true
             })
             .then(data=>{
                 if(data.data.status ==='success'){

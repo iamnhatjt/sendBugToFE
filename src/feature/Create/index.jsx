@@ -23,7 +23,7 @@ function Create() {
         }
         axios({
             method:'post',
-            url:'http://localhost:5000/createlesson',
+            url:'https://nhatjt-mobile.herokuapp.com/createlesson',
             withCredentials:true,
             data:{
                 label: $('.label').value,

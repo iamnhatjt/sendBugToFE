@@ -103,7 +103,7 @@ function Detail() {
                             axios({
                                 method: 'delete',
                                 withCredentials: true,
-                                url: 'http://localhost:5000/deletelesson',
+                                url: 'https://nhatjt-mobile.herokuapp.com/deletelesson',
                                 data:{
                                     label: label
                                 }

@@ -4,7 +4,7 @@ import axios from "axios";
 export const getData = createAsyncThunk('lesson', async ()=>{
     const data =  await  axios({
         method:'get',
-        url:'http://localhost:5000/get',
+        url:'https://nhatjt-mobile.herokuapp.com/get',
         withCredentials: true
     })
     return data
