@@ -1,0 +1,36 @@
+.study{
+    .board{
+        width: 80vw;
+        background-color: #1a1d28;
+        height: 60vh;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 4px;
+        color: #fff;
+        padding: 12px;
+        input{
+            background: none;
+            outline: none;
+            border-style: none ;
+            color: #fff;
+            background-color: #282e3e;
+            padding: 8px 12px;
+            border-radius: 8px;
+            width: 60vw;
+            height: 60px;
+            font-size: 24px;
+        }
+    }
+    .mean{
+        position: absolute;
+        bottom: 150px;
+    }
+    .answer{
+        position: absolute;
+        bottom: 80px;
+        left: 50%;
+        transform: translate(-50%,0);
+    }
+}

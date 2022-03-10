@@ -7,6 +7,7 @@ import {useDispatch} from 'react-redux'
 import App from './App'
 import Home from './feature/Home'
 import Loading from './component/Loading'
+import Study from './feature/Study'
 
 const Create = lazy(()=>import('./feature/Create'))
 const OverView = lazy(()=> import('./feature/OverView'))
@@ -35,6 +36,7 @@ function RouterSetting() {
                         <Route path='/create' element={<Create/>} />
                         <Route path='/overview' element={<OverView/>} />
                         <Route path='/overview/:id' element={<Detail/>} />
+                        <Route path='/overview/:id/study' element={<Study/>} />
                     </Route>
                 </Routes>
             </Suspense>

@@ -1,4 +1,4 @@
-const url_base = 'https://nhatjt-mobile.herokuapp.com'
+const url_base = 'http://localhost:5000'
 
 
 function getCookie(cname) {
@@ -7,10 +7,10 @@ function getCookie(cname) {
     let ca = decodedCookie.split(';');
     for(let i = 0; i <ca.length; i++) {
       let c = ca[i];
-      while (c.charAt(0) == ' ') {
+      while (c.charAt(0) === ' ') {
         c = c.substring(1);
       }
-      if (c.indexOf(name) == 0) {
+      if (c.indexOf(name) === 0) {
         return c.substring(name.length, c.length);
       }
     }

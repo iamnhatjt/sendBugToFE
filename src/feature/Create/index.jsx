@@ -17,28 +17,42 @@ function Create() {
     var dataPost = []
 
     function sendDate(){
+        var countCheck = 0;
         for(var i = 0; i< index; i++){
-            const child = {keyword: $$('.word')[i].value, mean: $$('.mean')[i].value }
-            dataPost.push(child)
-            
+            if( $$('.word')[i].value==='' ||$$('.mean')[i].value==='' || $('.label').value ===''){
+                countCheck++;
+            }
         }
-        axios({
-            method:'post',
-            url:`${url_base}/createlesson`,
-            withCredentials:true,
-            data:{
-                label: $('.label').value,
-                data: dataPost,
-                token: token
 
+
+        if(countCheck>0){
+            alert('Đừng để học phần bị trống thế homie!')
+        }
+        else{
+            for(var i = 0; i< index; i++){
+                    const child = {keyword: $$('.word')[i].value, mean: $$('.mean')[i].value }
+                    dataPost.push(child)
             }
-        })
-        .then(data=>{
-            if(data.data.status === 'success'){
-                alert('Tạo học phần thành công!')
-                window.location = '/'
-            }
-        })
+
+            axios({
+                method:'post',
+                url:`${url_base}/createlesson`,
+                withCredentials:true,
+                data:{
+                    label: $('.label').value,
+                    data: dataPost,
+                    token: token
+    
+                }
+            })
+            .then(data=>{
+                if(data.data.status === 'success'){
+                    alert('Tạo học phần thành công!')
+                    window.location = '/'
+                }
+            })
+        }
+        
     }
 
     return (

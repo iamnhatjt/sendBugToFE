@@ -5,6 +5,7 @@ import 'animate.css'
 import {useSelector} from 'react-redux'
 import axios from 'axios'
 import url_base, { token } from '../../variable'
+import { Link } from 'react-router-dom'
 
 function Detail() {
     const [index, setIndex] = useState(0)
@@ -37,7 +38,7 @@ function Detail() {
                     </div>
                 </div>
                 <div className="control my-5 text-center d-flex justify-content-around fs-3 text-light">
-                    <i class="fas fa-arrow-left n-hover "
+                    <i className="fas fa-arrow-left n-hover "
                         onClick={()=>{
                             setCheck(true)
                             document.querySelector('.board').className = ' board d-block mx-auto col-12 col-md-9 animate__animated  '
@@ -100,7 +101,7 @@ function Detail() {
             <div className="d-flex justify-content-around my-5">
                 <div className="btn btn-danger"
                     onClick={()=>{
-                        if( window.confirm('Sẽ không khôi phục được học phần khi xóa!')==true){
+                        if( window.confirm('Sẽ không khôi phục được học phần khi xóa!')===true){
                             axios({
                                 method: 'delete',
                                 withCredentials: true,
@@ -126,7 +127,7 @@ function Detail() {
                         }
                     }}
                 >Xóa học phần</div>
-                <div className="btn btn-success">Luyện tập học phần</div>
+                <Link to={`${window.location.pathname}/study`} className="link btn btn-success">Luyện tập học phần</Link>
 
             </div>
             <div className="noname"></div>
